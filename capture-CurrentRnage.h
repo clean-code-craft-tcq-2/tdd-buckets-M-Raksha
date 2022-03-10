@@ -1,5 +1,4 @@
 #pragma once
 
-#include "string.h"
 
-string ContentToBeWrittenToCSV(int *currentsample, int numberOfSample);
+std::string ContentToBeWrittenToCSV(int *currentsample, int numberOfSample);
