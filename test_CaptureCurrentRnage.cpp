@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 
 #include "catch.hpp"
-#include "Capture-CurrentRange.h"
+#include "capture-CurrentRange.h"
 
 TEST_CASE("Finds what needs to be written to CSV file")
 {
