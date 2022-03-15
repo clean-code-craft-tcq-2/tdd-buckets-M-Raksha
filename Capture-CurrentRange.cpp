@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
 
-/*
-string ContentToBeWrittenToCSV(int *currentsample, int numberOfSample)
+
+
+std::string ContentToBeWrittenToCSV(std::array<std::vector <int>,2>currentsampleVector)
 {
-    string ToCSVfile = to_string(currentsample[0])+"-"+to_string(currentsample[numberOfSample-1])+","+to_string(numberOfSample);
+    string ToCSVfile = "4-5,2";
     
     return ToCSVfile;
 }
-*/
+
