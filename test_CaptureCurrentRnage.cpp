@@ -16,6 +16,6 @@ TEST_CASE("Finds what needs to be written to CSV file")
   currentRangeVector[1].push_back(7);
   currentRangeVector[1].push_back(8);
   currentRangeVector[1].push_back(9);
-  //expectedoutput= "4-5,2\n7-9,3\n";
-  //REQUIRE(ContentToBeWrittenToCSV(currentRangeVector) == expectedoutput);
+  expectedoutput= "4-5,2\n7-9,3\n";
+  REQUIRE(ContentToBeWrittenToCSV(currentRangeVector) == expectedoutput);
 }
