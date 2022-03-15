@@ -2,4 +2,4 @@
 #include <vector>
 #include <array>
 
-std::string ContentToBeWrittenToCSV(int *currentsample, int numberOfSample);
+std::string ContentToBeWrittenToCSV(std::array<vector <int>,2>currentsampleVector);
