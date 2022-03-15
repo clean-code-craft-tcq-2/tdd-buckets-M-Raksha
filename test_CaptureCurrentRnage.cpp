@@ -19,3 +19,13 @@ TEST_CASE("Finds what needs to be written to CSV file")
   expectedoutput= "4-5,2\n7-9,3\n";
   REQUIRE(ContentToBeWrittenToCSV(currentRangeVector) == expectedoutput);
 }
+
+TEST_CASE("split the array into most often occured current ranges and return as vectors for single range input")
+{
+  int currentsample[2] = {4,5};
+  auto ranges= findCurrentRange(currentsample,2);
+  REQUIRE(ranges[0].front()==4);
+  REQUIRE(ranges[0].back()==5);
+  REQUIRE(ranges[0].size()==2);
+  REQUIRE(ranges[1].size()==0);
+}
