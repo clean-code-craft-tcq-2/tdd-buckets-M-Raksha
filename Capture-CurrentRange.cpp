@@ -1,4 +1,5 @@
 #include<iostream>
+#include "capture-CurrentRnage.h"
 using namespace std;
 
 
