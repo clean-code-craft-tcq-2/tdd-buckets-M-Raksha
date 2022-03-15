@@ -42,3 +42,10 @@ TEST_CASE("split the array into most often occured current ranges and return as 
  //REQUIRE(ranges[1].back()==9);
  REQUIRE(ranges[1].size()==3);
 }
+
+TEST_CASE("capture the current range and find out the content to be written to CSV given a array input")
+{
+ int currentsample[5] = {4,5,7,8,9};
+ std::string expectedoutput= "4-5,2\n7-9,3\n";
+ REQUIRE(CaptureMostOftenChargingCurentRanges(currentsample,5) == expectedoutput );
+}
