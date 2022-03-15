@@ -2,6 +2,34 @@
 #include "capture-CurrentRnage.h"
 using namespace std;
 
+std::array<vector <int>,2> findCurrentRange(int* arrayofCurrentSample,  int numberofsamples)
+{
+   std::array<vector <int>,2> currentranges;
+    int index;
+    int numberofranges =0;
+    
+    currentranges[numberofranges].push_back(arrayofCurrentSample[0]);
+    
+    for(index=1; index<numberofsamples;index++)
+    {
+        if((arrayofCurrentSample[index]- arrayofCurrentSample[index-1]) == 1)
+        {
+            currentranges[numberofranges].push_back(arrayofCurrentSample[index]);
+            
+        }
+        
+        else
+        {
+            
+            numberofranges++;
+            currentranges[numberofranges].push_back(arrayofCurrentSample[index]);
+           
+        }
+    }
+    
+    return currentranges;
+}
+
 std::string ContentToBeWrittenToCSV(std::array<std::vector <int>,2>currentsampleVector)
 {
     string ToCSVfile = "";
