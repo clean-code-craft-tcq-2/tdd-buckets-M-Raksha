@@ -45,3 +45,12 @@ std::string ContentToBeWrittenToCSV(std::array<std::vector <int>,2>currentsample
   return ToCSVfile;
 }
 
+
+std::string CaptureMostOftenChargingCurentRanges(int *currentsample, int numberofsamples)
+{
+    string CSVfileContent;
+    auto CurrentrangeVectors = findCurrentRange(currentsample,numberofsamples);
+    CSVfileContent = ContentToBeWrittenToCSV(CurrentrangeVectors);
+    return CSVfileContent;
+}
+
